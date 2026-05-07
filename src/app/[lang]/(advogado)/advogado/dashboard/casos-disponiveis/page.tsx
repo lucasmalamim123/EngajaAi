@@ -21,7 +21,7 @@ export default async function CasosDisponiveisPage({ params }: { params: Promise
 
   const query = supabase
     .from('cases')
-    .select('*, service_types(name, price, category), profiles(full_name)')
+    .select('*, service_types(name, price, category)')
     .eq('status', 'open')
     .order('created_at')
 
@@ -46,7 +46,6 @@ export default async function CasosDisponiveisPage({ params }: { params: Promise
         <div className="space-y-4">
           {cases.map(c => {
             const service = Array.isArray(c.service_types) ? c.service_types[0] : c.service_types
-            const client = Array.isArray(c.profiles) ? c.profiles[0] : c.profiles
             return (
               <Card key={c.id}>
                 <CardContent className="py-5">
