@@ -16,23 +16,39 @@ export default async function AdminCasosPage() {
     .order('created_at', { ascending: false }) as { data: CaseRow[] | null }
 
   const statusColor: Record<string, string> = {
+<<<<<<< HEAD
     pending:     'bg-yellow-100 text-yellow-700',
     open:        'bg-[#A6DEF7]/40 text-[#2B2BFF]',
     in_progress: 'bg-primary/10 text-primary',
     completed:   'bg-[#16A99B]/10 text-[#16A99B]',
     cancelled:   'bg-red-100 text-red-600',
+=======
+    pending: 'bg-yellow-100 text-yellow-700',
+    open: 'bg-blue-100 text-blue-700',
+    in_progress: 'bg-indigo-100 text-indigo-700',
+    completed: 'bg-green-100 text-green-700',
+    cancelled: 'bg-red-100 text-red-700',
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
   }
 
   return (
     <div className="space-y-6">
+<<<<<<< HEAD
       <h1 className="text-2xl font-bold text-foreground">Casos</h1>
+=======
+      <h1 className="text-2xl font-bold text-gray-900">Casos</h1>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       <Card>
         <CardHeader><CardTitle className="text-base">Todos os casos ({cases?.length ?? 0})</CardTitle></CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
+<<<<<<< HEAD
                 <tr className="border-b text-left text-muted-foreground">
+=======
+                <tr className="border-b text-left text-gray-500">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                   <th className="pb-3 pr-4 font-medium">ID</th>
                   <th className="pb-3 pr-4 font-medium">Título</th>
                   <th className="pb-3 pr-4 font-medium">Cliente</th>
@@ -47,18 +63,30 @@ export default async function AdminCasosPage() {
                   const service = Array.isArray(c.service_types) ? c.service_types[0] : c.service_types
                   const client = Array.isArray(c.profiles) ? c.profiles[0] : c.profiles
                   return (
+<<<<<<< HEAD
                     <tr key={c.id} className="border-b last:border-0 hover:bg-accent/20">
                       <td className="py-3 pr-4 font-mono text-xs text-muted-foreground">#{shortId(c.id)}</td>
                       <td className="py-3 pr-4 font-medium max-w-[200px] truncate">{c.title}</td>
                       <td className="py-3 pr-4 text-muted-foreground">{client?.full_name ?? '—'}</td>
                       <td className="py-3 pr-4 text-muted-foreground">{service?.name ?? '—'}</td>
+=======
+                    <tr key={c.id} className="border-b last:border-0 hover:bg-gray-50">
+                      <td className="py-3 pr-4 font-mono text-xs text-gray-400">#{shortId(c.id)}</td>
+                      <td className="py-3 pr-4 font-medium max-w-[200px] truncate">{c.title}</td>
+                      <td className="py-3 pr-4 text-gray-500">{client?.full_name ?? '—'}</td>
+                      <td className="py-3 pr-4 text-gray-500">{service?.name ?? '—'}</td>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                       <td className="py-3 pr-4 font-semibold">{formatCurrency(service?.price ?? 0)}</td>
                       <td className="py-3 pr-4">
                         <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor[c.status] ?? ''}`}>
                           {caseStatusLabel(c.status)}
                         </span>
                       </td>
+<<<<<<< HEAD
                       <td className="py-3 text-muted-foreground">{formatDate(c.created_at)}</td>
+=======
+                      <td className="py-3 text-gray-400">{formatDate(c.created_at)}</td>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                     </tr>
                   )
                 })}

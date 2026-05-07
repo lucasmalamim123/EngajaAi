@@ -88,12 +88,21 @@ function LoginForm() {
           </Button>
         </form>
         <div className="mt-4 text-center space-y-2">
+<<<<<<< HEAD
           <Link href="/recuperar-senha" className="text-sm text-primary hover:underline block">
             Esqueceu sua senha?
           </Link>
           <p className="text-sm text-muted-foreground">
             Não tem conta?{' '}
             <Link href="/cadastro" className="text-primary hover:underline">
+=======
+          <Link href="/recuperar-senha" className="text-sm text-blue-600 hover:underline block">
+            Esqueceu sua senha?
+          </Link>
+          <p className="text-sm text-gray-500">
+            Não tem conta?{' '}
+            <Link href="/cadastro" className="text-blue-600 hover:underline">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
               Cadastre-se
             </Link>
           </p>

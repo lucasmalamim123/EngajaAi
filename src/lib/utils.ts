@@ -5,6 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+<<<<<<< HEAD
 export function formatCurrency(value: number, locale = 'pt-PT'): string {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
@@ -14,14 +15,30 @@ export function formatCurrency(value: number, locale = 'pt-PT'): string {
 
 export function formatDate(date: string | Date, locale = 'pt-PT'): string {
   return new Intl.DateTimeFormat(locale, {
+=======
+export function formatCurrency(value: number): string {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(value)
+}
+
+export function formatDate(date: string | Date): string {
+  return new Intl.DateTimeFormat('pt-BR', {
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',
   }).format(new Date(date))
 }
 
+<<<<<<< HEAD
 export function formatDateTime(date: string | Date, locale = 'pt-PT'): string {
   return new Intl.DateTimeFormat(locale, {
+=======
+export function formatDateTime(date: string | Date): string {
+  return new Intl.DateTimeFormat('pt-BR', {
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',

@@ -10,6 +10,7 @@
       "PowerShell(Test-Path \"C:\\\\ProjetoAdvgElias\"; Test-Path \"C:\\\\plataforma-juridica\"; \\(Get-ChildItem \"C:\\\\ProjetoAdvgElias\" -Force -ErrorAction SilentlyContinue\\).Count; \\(Get-ChildItem \"C:\\\\plataforma-juridica\" -Force -ErrorAction SilentlyContinue\\).Count)",
       "PowerShell(Rename-Item \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\api\\\\contratos\\\\route.ts\" \"route.tsx\" -Force)",
       "Bash(npm run *)",
+<<<<<<< HEAD
       "Bash(New-Item -ItemType Directory -Path \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\tickets\\\\[id]\" -Force)",
       "Bash(git commit -m ' *)",
       "Bash(git branch *)",
@@ -23,6 +24,9 @@
     "additionalDirectories": [
       "C:\\ProjetoAdvgElias\\src\\app",
       "C:\\ProjetoAdvgElias\\src\\app\\[lang]\\(auth)"
+=======
+      "Bash(New-Item -ItemType Directory -Path \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\tickets\\\\[id]\" -Force)"
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     ]
   }
 }

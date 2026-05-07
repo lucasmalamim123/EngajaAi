@@ -23,13 +23,22 @@ export default async function ServicosPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="mb-10">
+<<<<<<< HEAD
         <h1 className="text-3xl font-bold text-foreground">Serviços disponíveis</h1>
         <p className="text-muted-foreground mt-2">Escolha o serviço jurídico que você precisa e contrate agora mesmo.</p>
+=======
+        <h1 className="text-3xl font-bold text-gray-900">Serviços disponíveis</h1>
+        <p className="text-gray-500 mt-2">Escolha o serviço jurídico que você precisa e contrate agora mesmo.</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       </div>
 
       {Object.entries(byCategory).map(([category, items]) => (
         <div key={category} className="mb-10">
+<<<<<<< HEAD
           <h2 className="text-lg font-semibold text-foreground/80 mb-4 border-b pb-2">{category}</h2>
+=======
+          <h2 className="text-lg font-semibold text-gray-700 mb-4 border-b pb-2">{category}</h2>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {(items ?? []).map(service => (
               <Card key={service!.id} className="flex flex-col">
@@ -41,7 +50,11 @@ export default async function ServicosPage() {
                   <CardDescription className="text-sm mt-1">{service!.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1">
+<<<<<<< HEAD
                   <p className="text-2xl font-bold text-primary">{formatCurrency(service!.price)}</p>
+=======
+                  <p className="text-2xl font-bold text-blue-700">{formatCurrency(service!.price)}</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                 </CardContent>
                 <CardFooter>
                   <Link href={`/contratar/${service!.id}`} className="w-full">
@@ -55,7 +68,11 @@ export default async function ServicosPage() {
       ))}
 
       {(!services || services.length === 0) && (
+<<<<<<< HEAD
         <p className="text-muted-foreground text-center py-20">Nenhum serviço disponível no momento.</p>
+=======
+        <p className="text-gray-500 text-center py-20">Nenhum serviço disponível no momento.</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       )}
     </div>
   )

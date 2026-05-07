@@ -182,9 +182,15 @@ function CadastroForm() {
             {isSubmitting ? 'Criando conta...' : 'Criar conta'}
           </Button>
         </form>
+<<<<<<< HEAD
         <p className="mt-4 text-center text-sm text-muted-foreground">
           Já tem conta?{' '}
           <Link href="/login" className="text-primary hover:underline">Entrar</Link>
+=======
+        <p className="mt-4 text-center text-sm text-gray-500">
+          Já tem conta?{' '}
+          <Link href="/login" className="text-blue-600 hover:underline">Entrar</Link>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
         </p>
       </CardContent>
     </Card>

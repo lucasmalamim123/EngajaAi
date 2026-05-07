@@ -39,10 +39,17 @@ export default function RecuperarSenhaPage() {
           <CardTitle>E-mail enviado</CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <p className="text-sm text-muted-foreground">
             Se esse e-mail estiver cadastrado, você receberá um link para redefinir sua senha em breve.
           </p>
           <Link href="/login" className="mt-4 block text-center text-sm text-primary hover:underline">
+=======
+          <p className="text-sm text-gray-600">
+            Se esse e-mail estiver cadastrado, você receberá um link para redefinir sua senha em breve.
+          </p>
+          <Link href="/login" className="mt-4 block text-center text-sm text-blue-600 hover:underline">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
             Voltar para o login
           </Link>
         </CardContent>
@@ -67,7 +74,11 @@ export default function RecuperarSenhaPage() {
             {isSubmitting ? 'Enviando...' : 'Enviar link'}
           </Button>
         </form>
+<<<<<<< HEAD
         <Link href="/login" className="mt-4 block text-center text-sm text-muted-foreground hover:underline">
+=======
+        <Link href="/login" className="mt-4 block text-center text-sm text-gray-500 hover:underline">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
           Voltar para o login
         </Link>
       </CardContent>

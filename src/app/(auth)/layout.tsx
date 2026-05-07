@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+<<<<<<< HEAD
 import { ShieldCheck, FileText, MessageSquare } from 'lucide-react'
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
@@ -41,6 +42,18 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           </div>
           {children}
         </div>
+=======
+
+export default function AuthLayout({ children }: { children: ReactNode }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-bold text-gray-900">Plataforma Jurídica</h1>
+          <p className="text-sm text-gray-500 mt-1">Seu escritório digital</p>
+        </div>
+        {children}
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       </div>
     </div>
   )

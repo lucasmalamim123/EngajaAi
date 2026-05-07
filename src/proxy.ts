@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
+<<<<<<< HEAD
 const LOCALES = ['pt-PT', 'pt-BR', 'en', 'es'] as const
 const DEFAULT_LOCALE = 'pt-PT'
 
@@ -51,6 +52,16 @@ export async function proxy(request: NextRequest) {
   const pathWithoutLocale = pathname.slice(pathnameLocale.length + 1) || '/'
   const fullPathWithoutLocale = `/${pathWithoutLocale}`
 
+=======
+const ROLE_ROUTES: Record<string, string> = {
+  '/cliente': 'client',
+  '/advogado': 'lawyer',
+  '/engajador': 'engager',
+  '/admin': 'admin',
+}
+
+export async function proxy(request: NextRequest) {
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
@@ -58,7 +69,13 @@ export async function proxy(request: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
       cookies: {
+<<<<<<< HEAD
         getAll() { return request.cookies.getAll() },
+=======
+        getAll() {
+          return request.cookies.getAll()
+        },
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
           supabaseResponse = NextResponse.next({ request })
@@ -71,16 +88,27 @@ export async function proxy(request: NextRequest) {
   )
 
   const { data: { user } } = await supabase.auth.getUser()
+<<<<<<< HEAD
 
   // Protect role routes
   const protectedPrefix = Object.keys(ROLE_ROUTES).find(prefix =>
     fullPathWithoutLocale.startsWith(prefix)
+=======
+  const { pathname } = request.nextUrl
+
+  const protectedPrefix = Object.keys(ROLE_ROUTES).find(prefix =>
+    pathname.startsWith(prefix)
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
   )
 
   if (protectedPrefix) {
     if (!user) {
       const url = request.nextUrl.clone()
+<<<<<<< HEAD
       url.pathname = `/${pathnameLocale}/login`
+=======
+      url.pathname = '/login'
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       url.searchParams.set('redirect', pathname)
       return NextResponse.redirect(url)
     }
@@ -94,13 +122,21 @@ export async function proxy(request: NextRequest) {
     const requiredRole = ROLE_ROUTES[protectedPrefix]
     if (profile?.role !== requiredRole && profile?.role !== 'admin') {
       const url = request.nextUrl.clone()
+<<<<<<< HEAD
       url.pathname = `/${pathnameLocale}${getDashboardByRole(profile?.role)}`
+=======
+      url.pathname = getDashboardByRole(profile?.role)
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       return NextResponse.redirect(url)
     }
   }
 
+<<<<<<< HEAD
   // Redirect authenticated users away from auth pages
   if (user && (fullPathWithoutLocale === '/login' || fullPathWithoutLocale === '/cadastro')) {
+=======
+  if (user && (pathname === '/login' || pathname === '/cadastro')) {
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     const { data: profile } = await supabase
       .from('profiles')
       .select('role')
@@ -108,7 +144,11 @@ export async function proxy(request: NextRequest) {
       .single()
 
     const url = request.nextUrl.clone()
+<<<<<<< HEAD
     url.pathname = `/${pathnameLocale}${getDashboardByRole(profile?.role)}`
+=======
+    url.pathname = getDashboardByRole(profile?.role)
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     return NextResponse.redirect(url)
   }
 
@@ -117,11 +157,19 @@ export async function proxy(request: NextRequest) {
 
 function getDashboardByRole(role?: string | null): string {
   switch (role) {
+<<<<<<< HEAD
     case 'client':  return '/cliente/dashboard'
     case 'lawyer':  return '/advogado/dashboard'
     case 'engager': return '/engajador/dashboard'
     case 'admin':   return '/admin/dashboard'
     default:        return '/'
+=======
+    case 'client':   return '/cliente/dashboard'
+    case 'lawyer':   return '/advogado/dashboard'
+    case 'engager':  return '/engajador/dashboard'
+    case 'admin':    return '/admin/dashboard'
+    default:         return '/'
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
   }
 }
 

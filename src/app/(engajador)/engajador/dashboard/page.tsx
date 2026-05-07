@@ -1,7 +1,13 @@
 import { createClient } from '@/lib/supabase/server'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+<<<<<<< HEAD
 import { formatCurrency, formatDate } from '@/lib/utils'
 import { Link2, Users } from 'lucide-react'
+=======
+import { Button } from '@/components/ui/button'
+import { formatCurrency, formatDate } from '@/lib/utils'
+import { Copy, Link2, Users, DollarSign } from 'lucide-react'
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
 import CopyButton from './CopyButton'
 
 export default async function EngajadorDashboardPage() {
@@ -24,7 +30,11 @@ export default async function EngajadorDashboardPage() {
   const paidCases = (indicacoes ?? []).filter(c => c.status === 'in_progress' || c.status === 'completed')
   const commission = engager?.commission_rate ?? 10
   const totalCommission = paidCases.reduce((sum, c) => {
+<<<<<<< HEAD
     const service = Array.isArray(c.service_types) ? c.service_types[0] : c.service_types as any
+=======
+    const service = Array.isArray(c.service_types) ? c.service_types[0] : c.service_types
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     return sum + ((service?.price ?? 0) * commission / 100)
   }, 0)
 
@@ -33,6 +43,7 @@ export default async function EngajadorDashboardPage() {
 
   return (
     <div className="space-y-6">
+<<<<<<< HEAD
       <h1 className="text-2xl font-bold text-foreground">Meu painel</h1>
 
       {/* Hero card */}
@@ -62,10 +73,23 @@ export default async function EngajadorDashboardPage() {
               <div>
                 <p className="text-lg font-bold">{engager?.referral_code ?? '—'}</p>
                 <p className="text-xs text-muted-foreground">Código de indicação</p>
+=======
+      <h1 className="text-2xl font-bold text-gray-900">Meu painel</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-3">
+              <Users className="text-blue-600" size={22} />
+              <div>
+                <p className="text-2xl font-bold">{totalCases}</p>
+                <p className="text-xs text-gray-500">Indicações</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
               </div>
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
         <Card>
           <CardContent className="pt-6">
@@ -76,6 +100,26 @@ export default async function EngajadorDashboardPage() {
               <div>
                 <p className="text-2xl font-bold">{totalCases}</p>
                 <p className="text-xs text-muted-foreground">Indicações</p>
+=======
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-3">
+              <DollarSign className="text-green-600" size={22} />
+              <div>
+                <p className="text-xl font-bold">{formatCurrency(totalCommission)}</p>
+                <p className="text-xs text-gray-500">Comissão estimada ({commission}%)</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-3">
+              <Link2 className="text-purple-600" size={22} />
+              <div>
+                <p className="text-lg font-bold">{engager?.referral_code ?? '—'}</p>
+                <p className="text-xs text-gray-500">Código de indicação</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
               </div>
             </div>
           </CardContent>
@@ -86,11 +130,19 @@ export default async function EngajadorDashboardPage() {
         <Card>
           <CardHeader><CardTitle className="text-base">Seu link de indicação</CardTitle></CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <div className="flex items-center gap-3 bg-muted/50 border border-border rounded-lg px-4 py-3">
               <p className="flex-1 text-sm text-foreground truncate">{referralUrl}</p>
               <CopyButton text={referralUrl} />
             </div>
             <p className="text-xs text-muted-foreground mt-2">
+=======
+            <div className="flex items-center gap-3 bg-gray-50 border rounded-lg px-4 py-3">
+              <p className="flex-1 text-sm text-gray-700 truncate">{referralUrl}</p>
+              <CopyButton text={referralUrl} />
+            </div>
+            <p className="text-xs text-gray-400 mt-2">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
               Compartilhe esse link. Quando um cliente se cadastrar por ele e contratar um serviço, você ganha {commission}% de comissão.
             </p>
           </CardContent>
@@ -103,6 +155,7 @@ export default async function EngajadorDashboardPage() {
         </CardHeader>
         <CardContent>
           {(!indicacoes || indicacoes.length === 0) ? (
+<<<<<<< HEAD
             <p className="text-muted-foreground text-sm text-center py-6">Nenhuma indicação ainda.</p>
           ) : (
             <div className="space-y-3">
@@ -119,6 +172,24 @@ export default async function EngajadorDashboardPage() {
                         +{formatCurrency((service?.price ?? 0) * commission / 100)}
                       </p>
                       <p className="text-xs text-muted-foreground">{c.status}</p>
+=======
+            <p className="text-gray-400 text-sm text-center py-6">Nenhuma indicação ainda.</p>
+          ) : (
+            <div className="space-y-3">
+              {indicacoes.map(c => {
+                const service = Array.isArray(c.service_types) ? c.service_types[0] : c.service_types
+                return (
+                  <div key={c.id} className="flex items-center justify-between p-3 border rounded-lg">
+                    <div>
+                      <p className="text-sm font-medium">{c.title}</p>
+                      <p className="text-xs text-gray-400">{formatDate(c.created_at)}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm font-semibold text-green-600">
+                        +{formatCurrency((service?.price ?? 0) * commission / 100)}
+                      </p>
+                      <p className="text-xs text-gray-400">{c.status}</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                     </div>
                   </div>
                 )

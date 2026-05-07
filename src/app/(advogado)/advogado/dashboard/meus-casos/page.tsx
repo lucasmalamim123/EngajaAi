@@ -15,14 +15,22 @@ export default async function MeusCasosPage() {
     .order('accepted_at', { ascending: false })
 
   const statusColor: Record<string, string> = {
+<<<<<<< HEAD
     open:        'bg-[#A6DEF7]/40 text-[#2B2BFF]',
     in_progress: 'bg-primary/10 text-primary',
     completed:   'bg-[#16A99B]/10 text-[#16A99B]',
     cancelled:   'bg-red-100 text-red-600',
+=======
+    open: 'bg-blue-100 text-blue-700',
+    in_progress: 'bg-indigo-100 text-indigo-700',
+    completed: 'bg-green-100 text-green-700',
+    cancelled: 'bg-red-100 text-red-700',
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
   }
 
   return (
     <div className="space-y-6">
+<<<<<<< HEAD
       <h1 className="text-2xl font-bold text-foreground">Meus casos</h1>
 
       {(!assignments || assignments.length === 0) ? (
@@ -30,6 +38,15 @@ export default async function MeusCasosPage() {
           <CardContent className="text-center py-16 text-muted-foreground">
             Você ainda não aceitou nenhum caso.{' '}
             <Link href="/advogado/dashboard/casos-disponiveis" className="text-primary hover:underline">
+=======
+      <h1 className="text-2xl font-bold text-gray-900">Meus casos</h1>
+
+      {(!assignments || assignments.length === 0) ? (
+        <Card>
+          <CardContent className="text-center py-16 text-gray-400">
+            Você ainda não aceitou nenhum caso.{' '}
+            <Link href="/advogado/dashboard/casos-disponiveis" className="text-blue-600 hover:underline">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
               Ver disponíveis
             </Link>
           </CardContent>
@@ -45,10 +62,17 @@ export default async function MeusCasosPage() {
                 <CardContent className="py-4 flex items-center justify-between gap-4">
                   <div className="min-w-0">
                     <p className="font-medium text-sm">{c?.title}</p>
+<<<<<<< HEAD
                     <p className="text-xs text-muted-foreground mt-0.5">
                       {service?.name} · Cliente: {client?.full_name} · #{c ? shortId(c.id) : ''}
                     </p>
                     <p className="text-xs text-muted-foreground">
+=======
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      {service?.name} · Cliente: {client?.full_name} · #{c ? shortId(c.id) : ''}
+                    </p>
+                    <p className="text-xs text-gray-400">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                       Aceito em {formatDate(a.accepted_at)}
                     </p>
                   </div>

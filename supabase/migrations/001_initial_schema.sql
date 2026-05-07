@@ -359,16 +359,28 @@ CREATE POLICY "Autenticado envia mensagem"
 CREATE OR REPLACE FUNCTION handle_new_user()
 RETURNS TRIGGER AS $$
 BEGIN
+<<<<<<< HEAD
   INSERT INTO public.profiles (id, role, full_name, email)
   VALUES (
     NEW.id,
     COALESCE(NEW.raw_user_meta_data->>'role', 'client'),
     COALESCE(NEW.raw_user_meta_data->>'full_name', split_part(NEW.email, '@', 1)),
+=======
+  INSERT INTO profiles (id, role, full_name, email)
+  VALUES (
+    NEW.id,
+    COALESCE(NEW.raw_user_meta_data->>'role', 'client'),
+    COALESCE(NEW.raw_user_meta_data->>'full_name', ''),
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
     NEW.email
   );
   RETURN NEW;
 END;
+<<<<<<< HEAD
 $$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public;
+=======
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
 
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users

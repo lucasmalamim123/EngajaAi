@@ -28,13 +28,22 @@ export default async function CasosDisponiveisPage() {
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
         <h1 className="text-2xl font-bold text-foreground">Casos disponíveis</h1>
         <p className="text-sm text-muted-foreground mt-1">Aceite os casos por ordem de chegada</p>
+=======
+        <h1 className="text-2xl font-bold text-gray-900">Casos disponíveis</h1>
+        <p className="text-sm text-gray-500 mt-1">Aceite os casos por ordem de chegada</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
       </div>
 
       {(!cases || cases.length === 0) ? (
         <Card>
+<<<<<<< HEAD
           <CardContent className="text-center py-16 text-muted-foreground">
+=======
+          <CardContent className="text-center py-16 text-gray-400">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
             Nenhum caso disponível no momento.
           </CardContent>
         </Card>
@@ -49,15 +58,24 @@ export default async function CasosDisponiveisPage() {
                   <div className="flex items-start justify-between gap-4 flex-wrap">
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold">{c.title}</p>
+<<<<<<< HEAD
                       <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{c.description}</p>
                       <div className="flex flex-wrap gap-3 mt-2 text-xs text-muted-foreground">
+=======
+                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">{c.description}</p>
+                      <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-400">
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                         <span>{service?.category} · {service?.name}</span>
                         <span>#{shortId(c.id)}</span>
                         <span>Solicitado em {formatDate(c.created_at)}</span>
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-3 shrink-0">
+<<<<<<< HEAD
                       <p className="text-xl font-bold text-primary">{formatCurrency(service?.price ?? 0)}</p>
+=======
+                      <p className="text-xl font-bold text-blue-700">{formatCurrency(service?.price ?? 0)}</p>
+>>>>>>> 955191e115df3f4d6ded61657ce3ee94843eb863
                       <AceitarCasoButton caseId={c.id} lawyerId={user!.id} />
                     </div>
                   </div>
