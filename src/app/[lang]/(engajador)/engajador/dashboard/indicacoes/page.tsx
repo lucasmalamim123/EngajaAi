@@ -28,7 +28,7 @@ export default async function IndicacoesPage({ params }: { params: Promise<{ lan
 
   const { data: cases } = await supabase
     .from('cases')
-    .select('*, service_types(name, price, category), profiles(full_name)')
+    .select('*, service_types(name, price, category), profiles!client_id(full_name)')
     .eq('engager_id', user!.id)
     .order('created_at', { ascending: false })
 

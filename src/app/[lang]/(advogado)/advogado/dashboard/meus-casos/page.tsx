@@ -21,7 +21,7 @@ export default async function MeusCasosPage({ params }: { params: Promise<{ lang
 
   const { data: assignments } = await supabase
     .from('case_assignments')
-    .select('*, cases(*, service_types(name, price, category), profiles(full_name))')
+    .select('*, cases(*, service_types(name, price, category), profiles!client_id(full_name))')
     .eq('lawyer_id', user!.id)
     .eq('status', 'accepted')
     .order('accepted_at', { ascending: false })

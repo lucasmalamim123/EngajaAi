@@ -25,7 +25,7 @@ export default async function AdminCasosPage({ params }: { params: Promise<{ lan
   const supabase = await createClient()
   const { data: cases } = await supabase
     .from('cases')
-    .select('*, service_types(name, price), profiles(full_name)')
+    .select('*, service_types(name, price), profiles!client_id(full_name)')
     .order('created_at', { ascending: false }) as { data: CaseRow[] | null }
 
   return (

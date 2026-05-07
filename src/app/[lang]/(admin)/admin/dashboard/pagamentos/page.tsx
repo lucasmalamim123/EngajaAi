@@ -18,7 +18,7 @@ export default async function AdminPagamentosPage({ params }: { params: Promise<
   const supabase = await createClient()
   const { data: payments } = await supabase
     .from('payments')
-    .select('*, cases(title, profiles(full_name))')
+    .select('*, cases(title, profiles!client_id(full_name))')
     .order('created_at', { ascending: false })
 
   const totalPaid = (payments ?? []).filter(p => p.status === 'paid').reduce((s, p) => s + (p.amount ?? 0), 0)
