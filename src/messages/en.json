@@ -1,0 +1,283 @@
+{
+  "common": {
+    "platform_name": "Legal Platform",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "see_all": "See all",
+    "no_data": "No data",
+    "date": "Date",
+    "status": "Status",
+    "actions": "Actions",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "id": "ID"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "my_cases": "My Cases",
+    "available_cases": "Available Cases",
+    "contracts": "Contracts",
+    "documents": "Documents",
+    "tickets": "Tickets",
+    "users": "Users",
+    "cases": "Cases",
+    "payments": "Payments",
+    "referrals": "Referrals",
+    "overview": "Overview",
+    "logout": "Sign out"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "description": "Access your account on the platform",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "forgot_password": "Forgot your password?",
+      "no_account": "Don't have an account?",
+      "register_link": "Sign up",
+      "error": "Incorrect email or password."
+    },
+    "register": {
+      "title": "Create account",
+      "description": "Sign up to access the platform",
+      "account_type": "Account type",
+      "full_name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "id_number": "Tax ID",
+      "oab_number": "Bar number",
+      "oab_state": "Bar state",
+      "password": "Password",
+      "confirm_password": "Confirm password",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "already_account": "Already have an account?",
+      "login_link": "Sign in",
+      "roles": {
+        "client": "Client",
+        "lawyer": "Lawyer",
+        "engager": "Referral Partner"
+      }
+    },
+    "forgot_password": {
+      "title": "Reset password",
+      "description": "We'll send a recovery link to your email",
+      "email": "Email",
+      "submit": "Send link",
+      "submitting": "Sending...",
+      "success": "Check your email to reset your password.",
+      "back_to_login": "Back to sign in"
+    }
+  },
+  "status": {
+    "case": {
+      "pending": "Awaiting payment",
+      "open": "Open",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "ticket": {
+      "open": "Open",
+      "in_progress": "In progress",
+      "closed": "Closed"
+    },
+    "document": {
+      "pending": "Under review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "payment": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "failed": "Failed",
+      "refunded": "Refunded"
+    }
+  },
+  "landing": {
+    "hero_title": "Accessible and digital legal services",
+    "hero_subtitle": "We connect clients with qualified lawyers in a simple, fast and secure way.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Learn more",
+    "features_title": "Everything you need, in one place",
+    "cta_section_title": "Ready to get started?",
+    "cta_section_text": "Join hundreds of clients who have already solved their legal issues.",
+    "nav_services": "Services",
+    "nav_login": "Sign in",
+    "nav_register": "Sign up",
+    "footer": "All rights reserved."
+  },
+  "services": {
+    "title": "Available Services",
+    "subtitle": "Choose the legal service that fits your needs",
+    "hire_button": "Hire",
+    "no_services": "No services available.",
+    "category": "Category"
+  },
+  "client": {
+    "dashboard": {
+      "title": "My dashboard",
+      "total_cases": "Total Cases",
+      "open_tickets": "Open Tickets",
+      "pending_payment": "Pending Payment",
+      "documents": "Documents",
+      "recent_cases": "Recent cases",
+      "no_cases": "You don't have any cases yet.",
+      "hire_service": "Hire a service"
+    },
+    "cases": {
+      "title": "My cases",
+      "no_cases": "You don't have any cases yet.",
+      "hire_service": "Hire a service",
+      "new_case": "New case",
+      "waiting_lawyer": "Waiting for lawyer"
+    },
+    "contracts": {
+      "title": "Contracts",
+      "download": "Download",
+      "no_contracts": "No contracts.",
+      "upload_signed": "Upload signed contract",
+      "uploading": "Uploading...",
+      "status": {
+        "pending": "Generating",
+        "sent": "Available to sign",
+        "signed": "Signed",
+        "cancelled": "Cancelled"
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "upload": "Upload document",
+      "no_documents": "No documents.",
+      "select_file": "Select file",
+      "uploading": "Uploading...",
+      "case_label": "Case"
+    },
+    "tickets": {
+      "title": "Support tickets",
+      "new_ticket": "New ticket",
+      "no_tickets": "No tickets.",
+      "reply": "Reply",
+      "case_label": "Case",
+      "subject_label": "Subject",
+      "subject_placeholder": "Briefly describe your question...",
+      "open_button": "Open ticket",
+      "opening": "Opening..."
+    }
+  },
+  "lawyer": {
+    "dashboard": {
+      "title": "My dashboard",
+      "available_cases": "Available Cases",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "tickets": "Open Tickets"
+    },
+    "available_cases": {
+      "title": "Available cases",
+      "subtitle": "Accept cases in order of arrival",
+      "accept": "Accept case",
+      "accepting": "Accepting...",
+      "no_cases": "No cases available at the moment."
+    },
+    "my_cases": {
+      "title": "My cases",
+      "no_cases": "You haven't accepted any cases yet.",
+      "see_available": "See available",
+      "accepted_at": "Accepted on",
+      "client_label": "Client"
+    },
+    "documents": {
+      "title": "Case documents",
+      "received": "Received documents",
+      "no_documents": "No documents yet."
+    },
+    "tickets": {
+      "title": "Tickets",
+      "no_tickets": "No tickets on your cases."
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin dashboard",
+      "total_revenue": "Total Revenue",
+      "total_users": "Users",
+      "active_cases": "Active Cases",
+      "pending_lawyers": "Pending Lawyers",
+      "open_cases": "Open cases",
+      "confirmed_payments": "Confirmed payments",
+      "recent_cases": "Recent cases",
+      "users_by_type": "Users by type"
+    },
+    "users": {
+      "title": "Users",
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "registered": "Registered",
+      "roles": {
+        "client": "Client",
+        "lawyer": "Lawyer",
+        "engager": "Referral Partner",
+        "admin": "Admin"
+      }
+    },
+    "cases": {
+      "title": "All cases",
+      "client": "Client",
+      "service": "Service",
+      "value": "Value"
+    },
+    "payments": {
+      "title": "Payments",
+      "total_received": "Total received",
+      "transactions": "Transactions",
+      "all_transactions": "All transactions",
+      "case": "Case",
+      "client": "Client",
+      "amount": "Amount"
+    }
+  },
+  "engager": {
+    "dashboard": {
+      "title": "My dashboard",
+      "estimated_commission": "Estimated Commission",
+      "referral_link": "Your referral link",
+      "referral_code": "Referral code",
+      "referrals": "Referrals",
+      "recent_referrals": "Recent referrals",
+      "no_referrals": "No referrals yet.",
+      "commission_info": "Share this link. When a client signs up and hires a service, you earn {rate}% commission.",
+      "total": "Total",
+      "converted": "Converted",
+      "rate": "Rate"
+    },
+    "referrals": {
+      "title": "My referrals",
+      "total_commission": "Total Estimated Commission",
+      "total": "Total referrals",
+      "converted": "Converted",
+      "rate": "Commission rate",
+      "history": "Referral history",
+      "no_referrals": "No referrals recorded yet.",
+      "id": "ID",
+      "case": "Case",
+      "client": "Client",
+      "service": "Service",
+      "commission": "Commission",
+      "pending_commission": "Pending"
+    }
+  },
+  "hire": {
+    "title": "Hire Service",
+    "case_title": "Case title",
+    "description": "Description",
+    "submit": "Proceed to payment",
+    "submitting": "Processing..."
+  }
+}

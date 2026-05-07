@@ -1,0 +1,283 @@
+{
+  "common": {
+    "platform_name": "Plataforma Jurídica",
+    "back": "Voltar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "loading": "A carregar...",
+    "error": "Ocorreu um erro",
+    "see_all": "Ver todos",
+    "no_data": "Sem dados",
+    "date": "Data",
+    "status": "Estado",
+    "actions": "Ações",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "id": "ID"
+  },
+  "nav": {
+    "dashboard": "Painel",
+    "my_cases": "Os Meus Casos",
+    "available_cases": "Casos Disponíveis",
+    "contracts": "Contratos",
+    "documents": "Documentos",
+    "tickets": "Tickets",
+    "users": "Utilizadores",
+    "cases": "Casos",
+    "payments": "Pagamentos",
+    "referrals": "Indicações",
+    "overview": "Visão Geral",
+    "logout": "Sair"
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar",
+      "description": "Aceda à sua conta na plataforma",
+      "email": "E-mail",
+      "password": "Palavra-passe",
+      "submit": "Entrar",
+      "submitting": "A entrar...",
+      "forgot_password": "Esqueceu a palavra-passe?",
+      "no_account": "Não tem conta?",
+      "register_link": "Registe-se",
+      "error": "E-mail ou palavra-passe incorretos."
+    },
+    "register": {
+      "title": "Criar conta",
+      "description": "Registe-se para aceder à plataforma",
+      "account_type": "Tipo de conta",
+      "full_name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "id_number": "NIF",
+      "oab_number": "Número OAB",
+      "oab_state": "Distrito OAB",
+      "password": "Palavra-passe",
+      "confirm_password": "Confirmar palavra-passe",
+      "submit": "Criar conta",
+      "submitting": "A criar conta...",
+      "already_account": "Já tem conta?",
+      "login_link": "Entrar",
+      "roles": {
+        "client": "Cliente",
+        "lawyer": "Advogado",
+        "engager": "Engajador"
+      }
+    },
+    "forgot_password": {
+      "title": "Recuperar palavra-passe",
+      "description": "Enviaremos um link de recuperação para o seu e-mail",
+      "email": "E-mail",
+      "submit": "Enviar link",
+      "submitting": "A enviar...",
+      "success": "Verifique o seu e-mail para redefinir a palavra-passe.",
+      "back_to_login": "Voltar ao início de sessão"
+    }
+  },
+  "status": {
+    "case": {
+      "pending": "Aguardando pagamento",
+      "open": "Aberto",
+      "in_progress": "Em andamento",
+      "completed": "Concluído",
+      "cancelled": "Cancelado"
+    },
+    "ticket": {
+      "open": "Aberto",
+      "in_progress": "Em andamento",
+      "closed": "Encerrado"
+    },
+    "document": {
+      "pending": "Aguardando análise",
+      "approved": "Aprovado",
+      "rejected": "Rejeitado"
+    },
+    "payment": {
+      "pending": "Pendente",
+      "paid": "Pago",
+      "failed": "Falhou",
+      "refunded": "Reembolsado"
+    }
+  },
+  "landing": {
+    "hero_title": "Serviços jurídicos acessíveis e digitais",
+    "hero_subtitle": "Conectamos clientes a advogados qualificados de forma simples, rápida e segura.",
+    "cta_primary": "Contratar agora",
+    "cta_secondary": "Saber mais",
+    "features_title": "Tudo o que precisa, num só lugar",
+    "cta_section_title": "Pronto para começar?",
+    "cta_section_text": "Junte-se a centenas de clientes que já resolveram os seus problemas jurídicos.",
+    "nav_services": "Serviços",
+    "nav_login": "Entrar",
+    "nav_register": "Registar",
+    "footer": "Todos os direitos reservados."
+  },
+  "services": {
+    "title": "Serviços Disponíveis",
+    "subtitle": "Escolha o serviço jurídico adequado às suas necessidades",
+    "hire_button": "Contratar",
+    "no_services": "Nenhum serviço disponível.",
+    "category": "Categoria"
+  },
+  "client": {
+    "dashboard": {
+      "title": "O meu painel",
+      "total_cases": "Total de Casos",
+      "open_tickets": "Tickets Abertos",
+      "pending_payment": "Pagamento Pendente",
+      "documents": "Documentos",
+      "recent_cases": "Casos recentes",
+      "no_cases": "Ainda não tem casos.",
+      "hire_service": "Contratar serviço"
+    },
+    "cases": {
+      "title": "Os meus casos",
+      "no_cases": "Ainda não tem casos.",
+      "hire_service": "Contratar um serviço",
+      "new_case": "Novo caso",
+      "waiting_lawyer": "A aguardar advogado"
+    },
+    "contracts": {
+      "title": "Contratos",
+      "download": "Descarregar",
+      "no_contracts": "Sem contratos.",
+      "upload_signed": "Enviar contrato assinado",
+      "uploading": "A enviar...",
+      "status": {
+        "pending": "A gerar",
+        "sent": "Disponível para assinar",
+        "signed": "Assinado",
+        "cancelled": "Cancelado"
+      }
+    },
+    "documents": {
+      "title": "Documentos",
+      "upload": "Enviar documento",
+      "no_documents": "Sem documentos.",
+      "select_file": "Selecionar ficheiro",
+      "uploading": "A enviar...",
+      "case_label": "Caso"
+    },
+    "tickets": {
+      "title": "Tickets de suporte",
+      "new_ticket": "Novo ticket",
+      "no_tickets": "Sem tickets.",
+      "reply": "Responder",
+      "case_label": "Caso",
+      "subject_label": "Assunto",
+      "subject_placeholder": "Descreva brevemente a sua dúvida...",
+      "open_button": "Abrir ticket",
+      "opening": "A abrir..."
+    }
+  },
+  "lawyer": {
+    "dashboard": {
+      "title": "O meu painel",
+      "available_cases": "Casos Disponíveis",
+      "in_progress": "Em Andamento",
+      "completed": "Concluídos",
+      "tickets": "Tickets Abertos"
+    },
+    "available_cases": {
+      "title": "Casos disponíveis",
+      "subtitle": "Aceite os casos por ordem de chegada",
+      "accept": "Aceitar caso",
+      "accepting": "A aceitar...",
+      "no_cases": "Nenhum caso disponível de momento."
+    },
+    "my_cases": {
+      "title": "Os meus casos",
+      "no_cases": "Ainda não aceitou nenhum caso.",
+      "see_available": "Ver disponíveis",
+      "accepted_at": "Aceite em",
+      "client_label": "Cliente"
+    },
+    "documents": {
+      "title": "Documentos dos casos",
+      "received": "Documentos recebidos",
+      "no_documents": "Nenhum documento ainda."
+    },
+    "tickets": {
+      "title": "Tickets",
+      "no_tickets": "Nenhum ticket nos seus casos."
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Painel administrativo",
+      "total_revenue": "Receita Total",
+      "total_users": "Utilizadores",
+      "active_cases": "Casos Ativos",
+      "pending_lawyers": "Advogados Pendentes",
+      "open_cases": "Casos abertos",
+      "confirmed_payments": "Pagamentos confirmados",
+      "recent_cases": "Casos recentes",
+      "users_by_type": "Utilizadores por tipo"
+    },
+    "users": {
+      "title": "Utilizadores",
+      "name": "Nome",
+      "email": "E-mail",
+      "role": "Perfil",
+      "registered": "Registo",
+      "roles": {
+        "client": "Cliente",
+        "lawyer": "Advogado",
+        "engager": "Engajador",
+        "admin": "Admin"
+      }
+    },
+    "cases": {
+      "title": "Todos os casos",
+      "client": "Cliente",
+      "service": "Serviço",
+      "value": "Valor"
+    },
+    "payments": {
+      "title": "Pagamentos",
+      "total_received": "Total recebido",
+      "transactions": "Transações",
+      "all_transactions": "Todas as transações",
+      "case": "Caso",
+      "client": "Cliente",
+      "amount": "Valor"
+    }
+  },
+  "engager": {
+    "dashboard": {
+      "title": "O meu painel",
+      "estimated_commission": "Comissão Estimada",
+      "referral_link": "O seu link de indicação",
+      "referral_code": "Código de indicação",
+      "referrals": "Indicações",
+      "recent_referrals": "Últimas indicações",
+      "no_referrals": "Nenhuma indicação ainda.",
+      "commission_info": "Partilhe este link. Quando um cliente se registar e contratar um serviço, recebe {rate}% de comissão.",
+      "total": "Total",
+      "converted": "Convertidas",
+      "rate": "Taxa"
+    },
+    "referrals": {
+      "title": "As minhas indicações",
+      "total_commission": "Comissão Total Estimada",
+      "total": "Total de indicações",
+      "converted": "Convertidas",
+      "rate": "Taxa de comissão",
+      "history": "Histórico de indicações",
+      "no_referrals": "Nenhuma indicação registada ainda.",
+      "id": "ID",
+      "case": "Caso",
+      "client": "Cliente",
+      "service": "Serviço",
+      "commission": "Comissão",
+      "pending_commission": "Pendente"
+    }
+  },
+  "hire": {
+    "title": "Contratar Serviço",
+    "case_title": "Título do caso",
+    "description": "Descrição",
+    "submit": "Ir para pagamento",
+    "submitting": "A processar..."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\ProjetoAdvgElias\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ProjetoAdvgElias\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ProjetoAdvgElias\\\\.claude\" -Force | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Folder\"}else{\"File\"}}})",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)",
+      "PowerShell(Test-Path \"C:\\\\ProjetoAdvgElias\"; Test-Path \"C:\\\\plataforma-juridica\"; \\(Get-ChildItem \"C:\\\\ProjetoAdvgElias\" -Force -ErrorAction SilentlyContinue\\).Count; \\(Get-ChildItem \"C:\\\\plataforma-juridica\" -Force -ErrorAction SilentlyContinue\\).Count)",
+      "PowerShell(Rename-Item \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\api\\\\contratos\\\\route.ts\" \"route.tsx\" -Force)",
+      "Bash(npm run *)",
+      "Bash(New-Item -ItemType Directory -Path \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\tickets\\\\[id]\" -Force)",
+      "Bash(git commit -m ' *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(python3 -c \"import json,sys; p=json.load\\(sys.stdin\\); print\\(json.dumps\\(p.get\\('exports',{}\\), indent=2\\)\\)\")",
+      "Bash(npx next *)",
+      "Bash(mkdir -p \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\")",
+      "Bash(mkdir -p \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(auth\\)\\\\login\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(auth\\)\\\\cadastro\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(auth\\)\\\\recuperar-senha\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(public\\)\\\\servicos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(public\\)\\\\contratar\\\\[id]\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\casos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\contratos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\documentos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(cliente\\)\\\\cliente\\\\dashboard\\\\tickets\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(advogado\\)\\\\advogado\\\\dashboard\\\\casos-disponiveis\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(advogado\\)\\\\advogado\\\\dashboard\\\\meus-casos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(advogado\\)\\\\advogado\\\\dashboard\\\\documentos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(advogado\\)\\\\advogado\\\\dashboard\\\\tickets\\\\[id]\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(admin\\)\\\\admin\\\\dashboard\\\\usuarios\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(admin\\)\\\\admin\\\\dashboard\\\\casos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(admin\\)\\\\admin\\\\dashboard\\\\pagamentos\" \"C:\\\\ProjetoAdvgElias\\\\src\\\\app\\\\[lang]\\\\\\(engajador\\)\\\\engajador\\\\dashboard\\\\indicacoes\")"
+    ],
+    "additionalDirectories": [
+      "C:\\ProjetoAdvgElias\\src\\app",
+      "C:\\ProjetoAdvgElias\\src\\app\\[lang]\\(auth)"
+    ]
+  }
+}
