@@ -168,23 +168,85 @@ NEXT_PUBLIC_APP_URL=
 ## Status das Etapas
 
 ### Etapa 1 — Estrutura Base ✅ CONCLUÍDA
+**Prazo:** 60–90 dias | **Valor:** R$ 8.000,00
 
-- [x] Schema SQL completo com RLS
-- [x] Clientes Supabase (browser + server)
-- [x] Middleware de proteção de rotas por role
-- [x] Tipos TypeScript do schema
-- [x] Autenticação (login, cadastro, recuperar senha)
-- [x] Página pública de serviços
-- [x] Fluxo de contratação com Stripe Checkout
-- [x] Webhook Stripe → criação de caso + pagamento + PDF
+- [x] Estrutura base da plataforma em versão web responsiva
+- [x] Cadastro e login dos perfis: cliente, advogado, engajador e administrador
+- [x] Páginas principais de apresentação e contratação dos serviços
+- [x] Fluxo inicial de contratação do serviço (Stripe Checkout)
+- [x] Geração/apresentação do contrato para download, assinatura e reenvio (PDF via @react-pdf/renderer)
+- [x] Integração inicial de pagamento (Stripe + webhook)
 - [x] Painel do cliente (casos, contratos, documentos, tickets)
-- [x] Painel do advogado (casos disponíveis, aceite, meus casos, tickets)
-- [x] Painel do engajador (link de indicação, histórico)
-- [x] Painel admin (usuários, casos, pagamentos)
-- [x] Design system roxo (Poppins, gradient hero, sidebar roxa)
-- [x] i18n completo — pt-PT / pt-BR / en / es em todas as rotas e componentes
-- [x] Seletor de idioma com bandeiras no header
+- [x] Painel do advogado (casos disponíveis, aceite, meus casos, documentos, tickets)
+- [x] Painel do engajador (link de indicação, histórico de indicações)
+- [x] Painel administrativo básico (usuários, casos, pagamentos)
+- [x] Upload e organização inicial de documentos (Supabase Storage)
+- [x] Abertura e acompanhamento de tickets entre cliente e advogado
+- [x] Listagem de casos disponíveis para advogados
+- [x] Aceite livre dos casos por ordem de chegada
+- [x] Acompanhamento básico do andamento do serviço
+- [x] Envio de e-mails transacionais via Resend (confirmação, acesso, avisos)
 
-### Etapa 2 — A definir
+---
 
-### Etapa 3 — A definir
+### Etapa 2 — Sofisticação e Aprimoramento 🔜 PENDENTE
+**Prazo:** 90 dias após conclusão da Etapa 1 | **Valor:** R$ 8.000,00
+
+**Painéis e acompanhamento:**
+- [ ] Evolução da experiência de uso dos painéis
+- [ ] Timeline mais detalhada dos processos
+- [ ] Cronômetro/prazo de entrega por etapa
+- [ ] Checklist por tipo de serviço
+- [ ] Histórico mais organizado do processo por etapas
+- [ ] Maior detalhamento do acompanhamento pelo cliente e pelo advogado
+
+**Documentos:**
+- [ ] Melhoria do fluxo de envio, validação e acompanhamento de documentos
+
+**IA operacional:**
+- [ ] Pré-análise com IA em nível operacional
+- [ ] Identificação de informações faltantes
+- [ ] Aviso de incongruências básicas
+- [ ] Sugestão de encaminhamento para consulta quando necessário
+
+**Financeiro:**
+- [ ] Extrato financeiro básico
+- [ ] Solicitação de saque em fluxo controlado
+
+**Admin e analytics:**
+- [ ] Relatórios administrativos iniciais
+- [ ] Dados analíticos principais: contratação, abandono, pagamentos, comissões e indicadores operacionais
+- [ ] Estrutura básica de rastreio de origem/campanha
+- [ ] Melhoria dos controles internos do admin
+
+---
+
+### Etapa 3 — Finalização e Preparação para Evoluções Futuras 🔜 PENDENTE
+**Prazo:** 60 dias após conclusão da Etapa 2 | **Valor:** R$ 8.000,00
+
+**Advogados:**
+- [ ] Implantação da lógica evolutiva dos planos de advogado
+- [ ] Estrutura dos planos Bronze, Prata e Ouro
+
+**Engajadores:**
+- [ ] Evolução do módulo do engajador
+- [ ] Ranking básico de engajadores
+- [ ] Lógica de indicação por venda paga
+- [ ] Melhoria da estrutura de comissões
+
+**Admin e financeiro:**
+- [ ] Aperfeiçoamento dos relatórios administrativos e financeiros
+- [ ] Evolução do controle de pagamentos e repasses
+
+**Casos e distribuição:**
+- [ ] Melhoria da distribuição de casos (base para regras mais avançadas)
+
+**Infraestrutura:**
+- [ ] Estrutura para futuras integrações e novas automações
+- [ ] Preparação da base do sistema para expansão e atualizações futuras
+- [ ] Refinamentos finais de estabilidade e operação
+
+---
+
+### Suporte Mensal (pós-etapas)
+Após conclusão das 3 etapas: manutenção técnica, correções, acompanhamento contínuo, pequenos ajustes operacionais e apoio à estabilidade.
